@@ -14,7 +14,7 @@ const ChannelPlaylists = () => {
   console.log(playlistData);
   return (
 
-    <div className='flex'>
+    <div className='flex overflow-x-auto'>
 
       <PlaylistContainer PLAYLIST_API_URL={getCompleteUrl(PLAYLIST_API_URL, { channelId: channelId })} />
       <Outlet />

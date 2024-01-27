@@ -1,6 +1,4 @@
-export const APP_LOGO = "https://www.edigitalagency.com.au/wp-content/uploads/Youtube-logo-png.png"
 export const USER_ICON_URL = "https://cdn-icons-png.flaticon.com/512/1144/1144760.png"
-
 export const LINKEDIN_URL = "https://www.linkedin.com/in/ritikgoyal4019/"
 export const LEETCODE_URL = "https://leetcode.com/ritik02122002/"
 export const GITHUB_URL = "https://github.com/ritik02122002"
@@ -138,7 +136,7 @@ export const PARTICULAR_VIDEO_API_URL = "https://youtube.googleapis.com/youtube/
 export const PARTICULAR_CHANNEL_API_URL = "https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics";
 export const VIDEO_CATEGORIES_API_URL = "https://youtube.googleapis.com/youtube/v3/videoCategories?part=snippet&regionCode=IN"
 export const VIDEOS_LIST_API_URL = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN";
-
+export const CORS_PROXY_URL="https://thingproxy.freeboard.io/fetch/"
 
 
 

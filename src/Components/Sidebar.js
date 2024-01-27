@@ -30,11 +30,11 @@ const SubSidebarLarge = ({ data }) => {
 
 }
 
-const SubSidebarSmall = () => {
+const SidebarSmall = () => {
 
     return (
 
-        <div className='mr-1 m-3 pr-1'>
+        <div className='mr-1 m-3 pr-1 hidden sm:block '>
             <Link to="/">
                 <div className='my-2 py-1 px-2 rounded-md hover:bg-gray-100'>
                     <span className='mx-auto w-max'><i className="fa fa-home fa-2x"></i></span>
@@ -66,7 +66,7 @@ const Sidebar = () => {
     ) :
         (
 
-            <SubSidebarSmall />
+            <SidebarSmall />
 
         )
 }

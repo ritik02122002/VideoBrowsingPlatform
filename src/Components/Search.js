@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { DEBOUNCING_WAIT_TIME_MILLISEC, ENTER_KEY_CODE, SEARCHBAR_BLUR_DELAY_MILLISECONDS, SEARCH_SUGGESTIONS_API_URL } from '../constants'
+import { CORS_PROXY_URL, DEBOUNCING_WAIT_TIME_MILLISEC, ENTER_KEY_CODE, SEARCHBAR_BLUR_DELAY_MILLISECONDS, SEARCH_SUGGESTIONS_API_URL } from '../constants'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux"
 import { cacheData } from '../utility/cachedSuggestionsSlice'
@@ -14,7 +14,7 @@ const Search = () => {
   const searchSuggestionCache = useSelector((store) => store?.searchSuggestionCache)
 
   const getSuggestionListData = async () => {
-    const data = await fetch(SEARCH_SUGGESTIONS_API_URL + "&q=" + searchTxt);
+    const data = await fetch(CORS_PROXY_URL + SEARCH_SUGGESTIONS_API_URL + "&q=" + searchTxt);
     const jsondata = await data.json();
     setSuggestionList(jsondata[1]);
     dispatch(cacheData({ [searchTxt]: jsondata[1] }));
@@ -91,7 +91,7 @@ const Search = () => {
                     console.log(listItem)
                   }}
                 >
-                  <i className="fa fa-search pr-3"></i>{listItem}
+                  <i className="fa fa-search pr-3"></i> <span className='break-words'>{listItem}</span>
                 </li>
 
               </Link>)}

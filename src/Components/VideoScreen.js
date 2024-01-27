@@ -29,7 +29,7 @@ const VideoScreen = () => {
 
 
   return ((vData && channelData) ?
-    <div className='flex w-full overflow-y-auto flex-wrap xl:flex-nowrap h-[calc(100vh-70px)]'>
+    <div className='flex w-full overflow-y-auto flex-wrap xl:flex-nowrap h-[calc(100vh-70px)] px-2'>
       <div >
         <VideoPlayer vData={vData} channelData={channelData} videoId={videoId?.get("v")} />
         {vData?.items[0]?.statistics?.commentCount > 0 &&
