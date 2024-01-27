@@ -1,13 +1,16 @@
-import React from 'react'
 import Sidebar from './Sidebar'
 import { Outlet } from 'react-router-dom'
+import NetworkStatus from './NetworkStatus'
 
 const Body = () => {
   return (
-    <div className='flex'>
-        <Sidebar/>
-        <Outlet/>
-    </div>
+    <>
+      <NetworkStatus />
+      <div className='flex'>
+        <Sidebar />
+        <Outlet />
+      </div>
+    </>
   )
 }
 

@@ -1,34 +1,24 @@
-import React, { useState } from 'react'
 import VideoCard from './VideoCard'
 import VideoCardShimmer from './VideoCardShimmer';
-import useVideosList from '../utility/useVideosList';
-import { API_KEY, VIDEOS_LIST_API_URL } from '../constants';
 import useDataList from '../utility/useDataList';
+import LiveVideo from './LiveVideo';
 
-const VideoContainer = () => {
-    const [pageToken,setPageToken]=useState(null);
-    // const [videoList, setVideoList] = useVideosList(pageToken);
-    const [videoList, setVideoList] =useDataList(VIDEOS_LIST_API_URL,{pageToken:pageToken},[pageToken]);
-    return (videoList==null?
-        <VideoCardShimmer/>
+const VideoContainer = ({ VIDEOS_LIST_API_URL, includeLiveVideo, type, dependency }) => {
+    console.log(VIDEOS_LIST_API_URL)
+    const [videoList] = useDataList(VIDEOS_LIST_API_URL, {}, [...(dependency != null ? dependency : [])]);
+    console.log(videoList);
+    return (videoList == null ?
+        <VideoCardShimmer />
         :
         <div>
-        <div className='flex justify-around'>
-        <button className='text-xl bg-gray-100 rounded-sm px-3 py-1 m-3' onClick={()=>{
-            
-            setPageToken(videoList.prevPageToken);
-        }}>Prev</button>
-        <button className='text-xl bg-gray-100 rounded-sm px-3 py-1 m-3' onClick={()=>{
-            console.log(videoList)
-            setPageToken(videoList.nextPageToken);
-        }}>Next</button>
-        </div>
-        <div className='flex flex-wrap justify-center'>
-            {
-                videoList.items.map(video => (video!=undefined?<VideoCard data={video} key={video.id}/>:null))
-            }
-        </div>
-        
+
+            <div className='flex flex-wrap justify-center py-3'>
+                {includeLiveVideo && <LiveVideo />}
+                {
+                    videoList?.items?.map(video => (video != undefined ? <VideoCard thumbnail={video?.snippet?.thumbnails} duration={video?.contentDetails?.duration} title={video?.snippet?.title} channelTitle={video?.snippet?.channelTitle} viewCount={video?.statistics?.viewCount} publishedAt={video?.snippet?.publishedAt} isLive={false} key={((type == "video") || (type == "playlist")) ? (video?.id) : (video?.snippet?.resourceId?.videoId)} id={((type == "video") || (type == "playlist")) ? (video?.id) : (video?.snippet?.resourceId?.videoId)} /> : null))
+                }
+            </div>
+
         </div>
     )
 }

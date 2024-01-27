@@ -1,45 +1,77 @@
-import { Provider } from 'react-redux';
+import { Provider} from 'react-redux';
 import './App.css';
 import Body from './Components/Body';
 import Header from './Components/Header';
 import store from './utility/store';
-import { BrowserRouter, RouterProvider, createBrowserRouter} from "react-router-dom"
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import MainContainer from './Components/MainContainer';
-import VideoPlayer from './Components/VideoPlayer';
 import SearchResult from './Components/SearchResult';
 import VideoScreen from './Components/VideoScreen';
+import ChannelHomePage from './Components/ChannelHomePage';
+import ChannelAbout from './Components/ChannelAbout';
+import ChannelVideos from './Components/ChannelVideos';
+import ChannelPlaylists from './Components/ChannelPlaylists';
+import PlaylistVideosContainer from './Components/PlaylistVideosContainer';
+import CategoryItem from './Components/CategoryItem';
+import ErrorElement from './Components/ErrorElement';
+
 function App() {
+
   return (
     <Provider store={store}>
-    <div className="App">
-    <BrowserRouter>
-    
-     </BrowserRouter>
-     <RouterProvider router={appRouter}/>
-    </div>
+      <div className="App">
+        <RouterProvider router={appRouter} />
+      </div>
     </Provider>
   );
 }
 
-const appRouter=createBrowserRouter([
+const appRouter = createBrowserRouter([
   {
-    path:"/",
-    element:<> <Header/><Body/></>,
-    children:[
+    path: "/",
+    element: <> <Header /><Body /></>,
+    errorElement: <ErrorElement />,
+    children: [
       {
-        path:"/",
-        element:<MainContainer/>
+        path: "/",
+        element: <MainContainer />
       },
       {
-        path:"/watch",
-        element:<VideoScreen/>
+        path: "/category/:categoryId",
+        element: <CategoryItem />
+      },
+      {
+        path: "/watch",
+        element: <VideoScreen />,
+
 
       },
       {
-        path:"/results",
-        element:<SearchResult/>
+        path: "/results",
+        element: <SearchResult />
+
+      },
+
+      {
+        path: "/channel/:channelId",
+        element: <ChannelHomePage />,
+        children: [{
+          path: "about",
+          element: <ChannelAbout />
+        }, {
+          path: "videos",
+          element: <ChannelVideos />
+        }, {
+          path: "playlists",
+          element: <ChannelPlaylists />,
+          children: [{
+            path: ":pid",
+            element: <PlaylistVideosContainer/>
+          }]
+        }]
 
       }
+
 
     ]
   },

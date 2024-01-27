@@ -1,12 +1,15 @@
-export const HAMBURGER_MENU_BUTTON_URL = "https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png";
 export const APP_LOGO = "https://www.edigitalagency.com.au/wp-content/uploads/Youtube-logo-png.png"
-export const SEARCH_ICON_URL = "https://www.iconpacks.net/icons/2/free-search-icon-2903-thumb.png"
-export const CREATE_ICON_URL = "https://static.thenounproject.com/png/4576699-200.png"
-export const NOTIFICATION_ICON_URL = "https://cdn.pixabay.com/photo/2020/10/31/06/28/youtube-bell-icon-5700370_960_720.png"
 export const USER_ICON_URL = "https://cdn-icons-png.flaticon.com/512/1144/1144760.png"
+
+export const LINKEDIN_URL = "https://www.linkedin.com/in/ritikgoyal4019/"
+export const LEETCODE_URL = "https://leetcode.com/ritik02122002/"
+export const GITHUB_URL = "https://github.com/ritik02122002"
+export const EMAIL_ID = "ritikgoyal4019@gmail.com"
+
 // export const API_KEY = "AIzaSyBbpFRtTzAuy7cQ3t9Yn4UBV2EGE_4R6rw"
-export const API_KEY="AIzaSyDzVv6WyhAhiIgVfNoxhUVrE1a0HRbSQF0"
-export const VIDEOS_LIST_API_URL = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=500&regionCode=IN";
+// export const API_KEY = "AIzaSyDzVv6WyhAhiIgVfNoxhUVrE1a0HRbSQF0"
+// export const API_KEY = "AIzaSyB_0A4g-5R1AQlG90UoslFM2M85S36G-6w"
+// export const API_KEY = "AIzaSyDjKUdKpuZ-DDUM_FBe6YQpeUY_sA6hlHE"
 
 
 export const SIDEBAR_ARRAY = [
@@ -16,134 +19,134 @@ export const SIDEBAR_ARRAY = [
         elements: [{
 
             name: "Home",
-            imageUrl:"https://cdn-icons-png.flaticon.com/256/25/25694.png"
-
-        },{
-
-            name: "Shorts",
-            imageUrl:"https://freelogopng.com/images/all_img/1685029929youtube-shorts-logo-black.png"
+            icon: "fa fa-home",
+            to: "/"
 
         },
-        {
-
-            name: "Subscriptions",
-            imageUrl:"https://cdn.icon-icons.com/icons2/3237/PNG/512/menu_youtube_social_media_subs_subscription_icon_197393.png"
-
-        }
         ]
 
+    }
+    , {
+        category: "Channels",
+        elements: [{
+
+            name: "Youtube",
+            icon: "fa fa-youtube-play",
+            to: "/channel/UCBR8-60-B28hp2BmDPdntcQ/about"
+
+        }, {
+            name: "Crazy XYZ",
+            img: "https://yt3.ggpht.com/ytc/AIf8zZRRSqFs6BMu4JrKUKD2NqBKd6jLEZpoUeFsszIBsA=s800-c-k-c0x00ffffff-no-rj",
+            to: "/channel/UCebC4x5l2-PQxg46Ucv9CsA/about"
+
+
+
+        }]
     }, {
-        category: "You",
-        elements: [{
-
-            name: "Your Channel",
-            imageUrl:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTviqXwnNcWduCzbY2kp6LsbDc4kQTfIjbkvm2grK5hjOR1VwHp"
-
-        },{
-
-            name: "History",
-            imageUrl:"https://cdn3.iconfinder.com/data/icons/chat-ui-1-3/1024/history-512.png"
-
-        },
-        {
-
-            name: "Your Videos",
-            imageUrl:"https://static.thenounproject.com/png/1813969-200.png"
-
-        }
-        ]
-
-    },{
         category: "Explore",
-        elements: [{
+        elements: [
+            {
 
-            name: "Trending",
-            imageUrl:"https://cdn1.iconfinder.com/data/icons/youtube-23/31/Subtract-14-512.png"
+                name: "Music",
+                icon: "fa fa-music",
+                to: "/category/10"
 
-        },{
+            },
+            {
 
-            name: "Shopping",
-            imageUrl:"https://freepngdesign.com/content/uploads/images/shopping-bag-7511.png"
+                name: "Sports",
+                icon: "fa fa-trophy",
+                to: "/category/17"
 
-        },
-        {
+            },
+            {
 
-            name: "Music",
-            imageUrl:"https://clipart-library.com/images/8TxrEKdoc.png"
+                name: "Gaming",
+                icon: "fa fa-gamepad",
+                to: "/category/20"
 
-        },
-        {
+            }, {
 
-            name: "Films",
-            imageUrl:"https://static.thenounproject.com/png/1453914-200.png"
+                name: "Science & Tech.",
+                icon: "fa fa-laptop",
+                to: "/category/28"
 
-        },{
+            }, {
 
-            name: "Live",
-            imageUrl:"https://static-00.iconduck.com/assets.00/live-icon-512x376-swbqg3p5.png"
+                name: "Automobile",
+                icon: "fa fa-car",
+                to: "/category/2"
 
-        },
-        {
+            },
+            {
 
-            name: "Gaming",
-            imageUrl:"https://cdn-icons-png.flaticon.com/512/7708/7708371.png"
+                name: "Entertainment",
+                icon: "fa fa-play",
+                to: "/category/24"
 
-        },
-        {
+            },
+            {
 
-            name: "News",
-            imageUrl:"https://static.thenounproject.com/png/518193-200.png"
+                name: "Film & Animation",
+                icon: "fa fa-film",
+                to: "/category/1"
 
-        },{
+            },
+            {
 
-            name: "Sport",
-            imageUrl:"https://uxwing.com/wp-content/themes/uxwing/download/sport-and-awards/champion-winner-trophy-icon.png"
+                name: "News & Politics",
+                icon: "fa fa-newspaper-o",
+                to: "/category/25"
 
-        },
-        {
+            },
+            {
 
-            name: "Learning",
-            imageUrl:"https://cdn-icons-png.flaticon.com/512/3521/3521848.png"
+                name: "Pets & Animals",
+                icon: "fa fa-paw",
+                to: "/category/15"
 
-        },
-        {
+            },
+            {
 
-            name: "Fashion & Beauty",
-            imageUrl:"https://www.shareicon.net/data/512x512/2016/04/24/754828_beauty_512x512.png"
+                name: "Comedy",
+                icon: "fa fa-smile-o",
+                to: "/category/23"
 
-        },{
-
-            name: "Podcasts",
-            imageUrl:"https://www.pinclipart.com/picdir/big/162-1622425_revue-de-bourbon-podcast-podcast-icon-black-and.png"
-
-        },
-        
+            },
         ]
 
     },
 ]
-export const BUTTON_LIST_ARRAY=[
-    "All","Mixes","Music","Lo-fi","Bollywood Music","Mantras","Bhavya Gandhi","Indian pop music","Soundtracks","Live","Satsang","Computer programming"]
-export const LIKE_BUTTON_ICON_URL="https://www.pngitem.com/pimgs/m/129-1293150_file-like-svg-wikimedia-commons-png-youtube-blue.png";
-export const DISLIKE_BUTTON_ICON_URL="https://www.pngkit.com/png/detail/116-1166751_dislike-icon-png.png"
-export const SHARE_BUTTON_ICON_URL="https://www.kindpng.com/picc/m/237-2377534_transparent-share-button-png-black-arrow-curved-right.png"
-export const DOWNLOAD_BUTTON_ICON_URL="https://cdn-icons-png.flaticon.com/512/156/156922.png";
-export const convertData = (views) => {
-    views = Number(views);
-    if (views >= 1000000) {
-      views = Math.round(views / 100000);
-      views /= 10;
-      return views + "M";
-    }
-    if (views >= 1000) {
-      views = Math.round(views / 100);
-      views /= 10;
-      return views + "K";
-    }
-    return views;
-  
-  
-  }
+export const BUTTON_LIST_ARRAY = ["All", "Mixes", "Music", "Lo-fi", "Bollywood Music", "Mantras", "Bhavya Gandhi", "Indian pop music", "Soundtracks", "Live", "Satsang", "Computer programming"]
+export const nameList = ["Adam", "Alex", "Aaron", "Ben", "Carl", "Dan", "David", "Edward", "Fred", "Frank", "George", "Hal", "Hank", "Ike", "John", "Jack", "Joe", "Larry", "Monte", "Matthew", "Mark", "Nathan", "Otto", "Paul", "Peter", "Roger", "Roger", "Steve", "Thomas", "Tim", "Ty", "Victor", "Walter", "Aman", "Rohit", "Shubham", "Purvi", "Saurav", "Sushil", "Amkit", "Nitin", "Deepak", "Raghavendra"]
+export const colors = ['bg-red-700', "bg-green-700", "bg-blue-700", "bg-purple-700", "bg-orange-700", "bg-pink-700", "bg-amber-700", "bg-stone-700", "bg-lime-700", "bg-teal-700", "bg-yellow-800", "bg-indigo-700", "bg-cyan-700", "bg-rose-700"]
 
-export const SEARCH_API_URL="https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&regionCode=IN&type=video";
-export const COMMENT_API_URL="https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies";
+
+export const MAX_CHATS_IN_SINGLE_API_POLL = 5;
+export const MAX_PLAYLIST_VIDEOS = 25;
+export const DEBOUNCING_WAIT_TIME_MILLISEC=200;
+export const SEARCHBAR_BLUR_DELAY_MILLISECONDS=500;
+export const LIVECHAT_POLLING_DELAY_MILLISECONDS=2000;
+export const CONSECUTIVE_LIVECHATS_DELAY_MILLISECONDS=200;
+export const NETWORK_STATUS_VISIBLE_TIME_MILLISEC=3000;
+export const ENTER_KEY_CODE=13
+export const DEFAULT_LIVEVIDEO_QUERY_STRING="Shree Ram";
+export const DEFAULT_CHAT_MESSAGE="Hey! I am ";
+
+
+export const SEARCH_API_URL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&regionCode=IN";
+export const COMMENT_API_URL = "https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies";
+export const CHANNEL_API_URL = "https://youtube.googleapis.com/youtube/v3/channels?part=brandingSettings%2C%20contentDetails%2C%20contentOwnerDetails%2C%20localizations%2C%20snippet%2C%20statistics%2C%20status%2C%20topicDetails"
+export const SEARCH_SUGGESTIONS_API_URL = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt"
+export const PLAYLIST_VIDEOS_API_URL = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cstatus%2Cid&maxResults=25";
+export const PLAYLIST_API_URL = "https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&maxResults=25"
+export const PARTICULAR_VIDEO_API_URL = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics";
+export const PARTICULAR_CHANNEL_API_URL = "https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics";
+export const VIDEO_CATEGORIES_API_URL = "https://youtube.googleapis.com/youtube/v3/videoCategories?part=snippet&regionCode=IN"
+export const VIDEOS_LIST_API_URL = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN";
+
+
+
+
+
+
