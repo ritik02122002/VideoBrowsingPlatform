@@ -6,12 +6,6 @@ export const LEETCODE_URL = "https://leetcode.com/ritik02122002/"
 export const GITHUB_URL = "https://github.com/ritik02122002"
 export const EMAIL_ID = "ritikgoyal4019@gmail.com"
 
-// export const API_KEY = "AIzaSyBbpFRtTzAuy7cQ3t9Yn4UBV2EGE_4R6rw"
-// export const API_KEY = "AIzaSyDzVv6WyhAhiIgVfNoxhUVrE1a0HRbSQF0"
-// export const API_KEY = "AIzaSyB_0A4g-5R1AQlG90UoslFM2M85S36G-6w"
-// export const API_KEY = "AIzaSyDjKUdKpuZ-DDUM_FBe6YQpeUY_sA6hlHE"
-
-
 export const SIDEBAR_ARRAY = [
 
     {
