@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux"
 import { cacheData } from '../utility/cachedSuggestionsSlice'
 import SEARCH_ICON from '../assets/SEARCH_ICON.png'
+import fetchJsonp from 'fetch-jsonp';
 
 const Search = () => {
   const [searchTxt, setSearchTxt] = useState("");
@@ -14,7 +15,7 @@ const Search = () => {
   const searchSuggestionCache = useSelector((store) => store?.searchSuggestionCache)
 
   const getSuggestionListData = async () => {
-    const data = await fetch(SEARCH_SUGGESTIONS_API_URL + "&q=" + searchTxt);
+    const data=await fetchJsonp(SEARCH_SUGGESTIONS_API_URL + "&q=" + searchTxt)
     const jsondata = await data.json();
     setSuggestionList(jsondata[1]);
     dispatch(cacheData({ [searchTxt]: jsondata[1] }));
