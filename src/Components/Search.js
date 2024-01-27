@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { CORS_PROXY_URL, DEBOUNCING_WAIT_TIME_MILLISEC, ENTER_KEY_CODE, SEARCHBAR_BLUR_DELAY_MILLISECONDS, SEARCH_SUGGESTIONS_API_URL } from '../constants'
+import { DEBOUNCING_WAIT_TIME_MILLISEC, ENTER_KEY_CODE, SEARCHBAR_BLUR_DELAY_MILLISECONDS, SEARCH_SUGGESTIONS_API_URL } from '../constants'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux"
 import { cacheData } from '../utility/cachedSuggestionsSlice'
@@ -82,7 +82,7 @@ const Search = () => {
       </div>
       {isSuggestionsVisible &&
         (
-          <ul className=' absolute bg-white w-40 2xl:w-[650px] xl:w-[500px] lg:w-[450px] md:w-72 sm:w-56 shadow-lg shadow-gray-600 rounded-lg my-2 z-50'>
+          <ul className=' absolute bg-white w-40 2xl:w-[650px] xl:w-[500px] lg:w-[450px] md:w-72 sm:w-56 shadow-lg shadow-gray-600 rounded-lg my-2 z-50 max-h-96 overflow-y-auto'>
             {suggestionList.map((listItem) =>
               <Link to={"/results?search_query=" + listItem} key={listItem}>
                 <li className='p-1 pl-5 hover:bg-gray-50 cursor-pointer hover:font-semibold last:pb-3'
