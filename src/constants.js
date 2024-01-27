@@ -131,7 +131,7 @@ export const DEFAULT_CHAT_MESSAGE="Hey! I am ";
 export const SEARCH_API_URL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&regionCode=IN";
 export const COMMENT_API_URL = "https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies";
 export const CHANNEL_API_URL = "https://youtube.googleapis.com/youtube/v3/channels?part=brandingSettings%2C%20contentDetails%2C%20contentOwnerDetails%2C%20localizations%2C%20snippet%2C%20statistics%2C%20status%2C%20topicDetails"
-export const SEARCH_SUGGESTIONS_API_URL = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt"
+export const SEARCH_SUGGESTIONS_API_URL = "https://suggestqueries.google.com/complete/search?client=firefox&ds=yt"
 export const PLAYLIST_VIDEOS_API_URL = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cstatus%2Cid&maxResults=25";
 export const PLAYLIST_API_URL = "https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&maxResults=25"
 export const PARTICULAR_VIDEO_API_URL = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics";
