@@ -14,7 +14,7 @@ const Search = () => {
   const searchSuggestionCache = useSelector((store) => store?.searchSuggestionCache)
 
   const getSuggestionListData = async () => {
-    const data = await fetch(CORS_PROXY_URL + SEARCH_SUGGESTIONS_API_URL + "&q=" + searchTxt);
+    const data = await fetch(SEARCH_SUGGESTIONS_API_URL + "&q=" + searchTxt);
     const jsondata = await data.json();
     setSuggestionList(jsondata[1]);
     dispatch(cacheData({ [searchTxt]: jsondata[1] }));
