@@ -1,4 +1,4 @@
-import Sidebar from './Sidebar'
+import Menubar from './Menubar'
 import { Outlet } from 'react-router-dom'
 import NetworkStatus from './NetworkStatus'
 
@@ -7,7 +7,7 @@ const Body = () => {
     <>
       <NetworkStatus />
       <div className='flex'>
-        <Sidebar />
+        <Menubar />
         <Outlet />
       </div>
     </>

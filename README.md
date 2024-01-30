@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# YouTube Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Youtube clone built using primarily _React.js_ and _Tailwind CSS_
 
-## Available Scripts
+### Features:
 
-In the project directory, you can run:
 
-### `npm start`
+- **Config driven UI with YouTube API Integration:**
+  - Implemented a config-driven UI empowered with _real-world data_ fetching from YouTube API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Search Functionality:**
+  - Implemented a search functionality with _auto suggestions_, enabling users to easily find and navigate to desired content.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Auto Search Suggestions:**
+  - Implemented auto search suggestions with _debouncing_ and _caching using Redux_, improving search responsiveness and efficiency.
 
-### `npm test`
+- **Live Chatting Feature:**
+  - Implemented a mock live chatting feature in live videos using _polling_ at fixed time intervals giving it a _feel of an actual live chat_.
+    
+- **Shimmer Effects:**
+  - Implemented _my own shimmer loading effects_ for playlists, videos, comments, etc., enhancing the user experience during data fetching.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Dynamic Loading of Search Results:**
+  - Enabled dynamic loading of more search results as the user reaches the end of the current results, providing a continuous and engaging experience.
 
-### `npm run build`
+- **Single Page Application with Routing:**
+  - Developed a single-page application using React with seamless navigation across various sections using the _react-router-dom_ library.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Fetching data as and when required:**
+  - Fetching data only if and when the user expresses interest, optimizing application performance by _making only required api calls_.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **State Management with Redux:**
+  - Utilized Redux store for efficient state management, dispatching actions for updatating the slices of store and subscribing to the slices of the store to maintain a consistent application state.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Menubar Toggle Functionality:**
+  - Integrated a toggle feature allowing users to _switch between a wide and narrow Menubar layout_, enhancing flexibility and user customization.
 
-### `npm run eject`
+- **Custom Hooks for Reusability:**
+  - Created _custom hooks_ to enhance code _reusability_, promoting cleaner and more maintainable code.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Expand/Collapse Features:**
+  - Integrated a _expand and collapse feature_ for video descriptions, comments & comment replies enhancing the readability and user-friendliness of the application.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Videos sharing feature:**
+  - Users can _easily share videos_ on WhatsApp, Telegram and Email directly or can _copy & share the video link_ through the share button.
+    
+ - **Offline and Online Popup:**
+    - Implemented a _popup to notify users_ when they go offline or come back online, enhancing user awareness and experience.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Caching of Live Video on homepage :**
+  - Implemented _caching for live video on homepage_, optimizing the performance when the user returns back on the home page.
+    
+- **Component Reusability:**
+  - Emphasized _component reusability_, promoting modular and scalable code architecture.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Categorized Menu:**
+  - _Organized the menu with various categories_ such as entertainment, news, gaming, comedy, science & technology, enhancing content discoverability for users.
 
-## Learn More
+- **React Props and Hooks Usage:**
+  - Utilized _React props_, and _hooks like useState, and useEffect_ to efficiently manage component states and lifecycle events.
+    
+- **Responsiveness:**
+  - Ensured _responsiveness_ across various devices for a seamless user experience.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Error Page:**
+  - Designed an error page for graceful error handling.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Clean Code Practices:**
+  - Followed _clean code practices_ to ensure maintainability and readability.
+<br/>
+    Note : Currently it includes only front end part

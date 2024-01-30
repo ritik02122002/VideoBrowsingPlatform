@@ -3,7 +3,7 @@ import VideoPlayer from './VideoPlayer'
 import CommentContainer from './CommentContainer'
 import { useDispatch } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
-import { collapseScrollbar, togglePosition } from '../utility/menuSlice';
+import { collapseMenubar, toggleMenubarPositionValue } from '../utility/menuSlice';
 import useVideoAndChannelData from '../utility/useVideoAndChannelData';
 import VideoPlayerShimmer from './VideoPlayerShimmer'
 import LiveChatContainer from './LiveChatContainer'
@@ -19,18 +19,18 @@ const VideoScreen = () => {
 
   useEffect(() => {
 
-    dispatch(collapseScrollbar());
-    dispatch(togglePosition());
+    dispatch(collapseMenubar());
+    dispatch(toggleMenubarPositionValue());
 
-    return () => dispatch(togglePosition());
+    return () => dispatch(toggleMenubarPositionValue());
 
 
   }, [])
 
 
   return ((vData && channelData) ?
-    <div className='flex w-full overflow-y-auto flex-wrap xl:flex-nowrap h-[calc(100vh-70px)] px-2'>
-      <div >
+    <div className='flex w-[calc(100vw)] overflow-y-auto flex-wrap xl:flex-nowrap h-[calc(100vh-70px)] px-2'>
+      <div className='mx-auto'>
         <VideoPlayer vData={vData} channelData={channelData} videoId={videoId?.get("v")} />
         {vData?.items[0]?.statistics?.commentCount > 0 &&
           <CommentContainer videoId={videoId?.get("v")} numComments={vData?.items[0]?.statistics?.commentCount} />}

@@ -6,7 +6,7 @@ const SearchResultsShimmer = () => {
             {[...Array(10)].map((item, indx) =>
                 <div className='m-4 w-full' key={indx}>
 
-                    <div className='flex'>
+                    <div className='flex rounded-md w-[calc(100vw-40px)] sm:w-[calc(100vw-330px)] flex-col xs:flex-row'>
                         <div className='rounded-lg h-40 w-64 md:h-52 md:w-80 bg-gray-100'></div>
                         <div className='mx-3 w-full'>
                             <h2 className='h-5 md:h-6 lg:h-8 xl:h-10 my-3 px-1 w-20 rounded-md bg-gray-100'></h2>

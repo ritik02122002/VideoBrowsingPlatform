@@ -4,7 +4,7 @@ export const LEETCODE_URL = "https://leetcode.com/ritik02122002/"
 export const GITHUB_URL = "https://github.com/ritik02122002"
 export const EMAIL_ID = "ritikgoyal4019@gmail.com"
 
-export const SIDEBAR_ARRAY = [
+export const MENUBAR_ARRAY = [
 
     {
         category: null,
@@ -23,7 +23,7 @@ export const SIDEBAR_ARRAY = [
         elements: [{
 
             name: "Youtube",
-            icon: "fa fa-youtube-play",
+            icon: "fa fa-youtube-play text-red-600",
             to: "/channel/UCBR8-60-B28hp2BmDPdntcQ/about"
 
         }, {
@@ -116,14 +116,14 @@ export const colors = ['bg-red-700', "bg-green-700", "bg-blue-700", "bg-purple-7
 
 export const MAX_CHATS_IN_SINGLE_API_POLL = 5;
 export const MAX_PLAYLIST_VIDEOS = 25;
-export const DEBOUNCING_WAIT_TIME_MILLISEC=200;
-export const SEARCHBAR_BLUR_DELAY_MILLISECONDS=500;
-export const LIVECHAT_POLLING_DELAY_MILLISECONDS=2000;
-export const CONSECUTIVE_LIVECHATS_DELAY_MILLISECONDS=200;
-export const NETWORK_STATUS_VISIBLE_TIME_MILLISEC=3000;
-export const ENTER_KEY_CODE=13
-export const DEFAULT_LIVEVIDEO_QUERY_STRING="Shree Ram";
-export const DEFAULT_CHAT_MESSAGE="Hey! I am ";
+export const DEBOUNCING_WAIT_TIME_MILLISEC = 200;
+export const SEARCHBAR_BLUR_DELAY_MILLISECONDS = 500;
+export const LIVECHAT_POLLING_DELAY_MILLISECONDS = 2000;
+export const CONSECUTIVE_LIVECHATS_DELAY_MILLISECONDS = 200;
+export const NETWORK_STATUS_VISIBLE_TIME_MILLISEC = 3000;
+export const ENTER_KEY_CODE = 13
+export const DEFAULT_LIVEVIDEO_QUERY_STRING = "Shree Ram";
+export const DEFAULT_CHAT_MESSAGE = "Hey! I am ";
 
 
 export const SEARCH_API_URL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&regionCode=IN";
@@ -136,9 +136,11 @@ export const PARTICULAR_VIDEO_API_URL = "https://youtube.googleapis.com/youtube/
 export const PARTICULAR_CHANNEL_API_URL = "https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics";
 export const VIDEO_CATEGORIES_API_URL = "https://youtube.googleapis.com/youtube/v3/videoCategories?part=snippet&regionCode=IN"
 export const VIDEOS_LIST_API_URL = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN";
-export const CORS_PROXY_URL="https://thingproxy.freeboard.io/fetch/"
+export const CORS_PROXY_URL = "https://thingproxy.freeboard.io/fetch/"
 
 
+export const WHATSAPP_SEND_MSG_API_URL = "https://api.whatsapp.com/send/?text="
+export const TELEGRAM_SEND_MSG_API_URL = "tg://msg_url?url="
 
 
 

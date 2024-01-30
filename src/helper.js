@@ -1,4 +1,4 @@
-const API_KEY=process.env.REACT_APP_API_KEY
+const API_KEY = process.env.REACT_APP_API_KEY
 
 export const convertData = (views) => {
     views = Number(views)
@@ -152,4 +152,13 @@ export const decodeHtmlEntities = (encodedString) => {
     const textarea = document.createElement("textarea");
     textarea.innerHTML = encodedString;
     return textarea.value;
+}
+
+export const copyContent = async (text) => {
+    try {
+        await navigator.clipboard.writeText(text);
+        console.log('Content copied to clipboard');
+    } catch (err) {
+        console.error('Failed to copy: ', err);
+    }
 }

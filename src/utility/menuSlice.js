@@ -3,15 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 const menuSlice = createSlice({
     name: "menu",
     initialState: {
-        isSideBarLarge: true,
+        isMenubarWide: true,
         position: "static"
     },
     reducers: {
-        toggleScrollbarSize: (state) => { state.isSideBarLarge = !state.isSideBarLarge },
-        collapseScrollbar: (state) => { state.isSideBarLarge = false },
-        togglePosition: (state) => { state.position === "static" ? state.position = "fixed" : state.position = "static" }
+        toggleMenubarSize: (state) => { state.isMenubarWide = !state.isMenubarWide },
+        collapseMenubar: (state) => { state.isMenubarWide = false },
+        toggleMenubarPositionValue: (state) => { state.position === "static" ? state.position = "fixed" : state.position = "static" }
     }
 });
 
-export const { toggleScrollbarSize, collapseScrollbar, togglePosition } = menuSlice.actions;
+export const { toggleMenubarSize, collapseMenubar, toggleMenubarPositionValue } = menuSlice.actions;
 export default menuSlice.reducer;

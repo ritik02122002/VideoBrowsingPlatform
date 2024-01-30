@@ -15,6 +15,8 @@ import PlaylistVideosContainer from './Components/PlaylistVideosContainer';
 import CategoryItem from './Components/CategoryItem';
 import ErrorElement from './Components/ErrorElement';
 
+console.log = function() {}
+
 function App() {
 
   return (

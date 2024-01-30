@@ -1,11 +1,11 @@
 import React from 'react'
-import { SIDEBAR_ARRAY } from '../constants'
+import { MENUBAR_ARRAY } from '../constants'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import AboutUs from './AboutUs'
 
 
-const SubSidebarLarge = ({ data }) => {
+const SubMenubarWide = ({ data }) => {
 
     return (
 
@@ -30,7 +30,7 @@ const SubSidebarLarge = ({ data }) => {
 
 }
 
-const SidebarSmall = () => {
+const MenubarNarrow = () => {
 
     return (
 
@@ -48,16 +48,16 @@ const SidebarSmall = () => {
 
 }
 
-const Sidebar = () => {
-    const isSideBarLarge = useSelector(store => store?.menu?.isSideBarLarge);
+const Menubar = () => {
+    const isMenubarWide = useSelector(store => store?.menu?.isMenubarWide);
     const position = useSelector(store => store?.menu?.position);
-    return isSideBarLarge ? (
+    return isMenubarWide ? (
 
 
         <div className={'z-40 mr-2 pl-2 pr-2 overflow-y-auto min-w-max shadow-md shadow-gray-500 bg-white' + ((position == 'fixed') ? ' fixed h-[calc(100vh-70px)]' : ' fixed h-[calc(100vh-70px)] md:static')}>
 
             {
-                SIDEBAR_ARRAY?.map((data, index) => <SubSidebarLarge data={data} key={index} />)
+                MENUBAR_ARRAY?.map((data, index) => <SubMenubarWide data={data} key={index} />)
             }
             <AboutUs />
         </div>
@@ -66,9 +66,9 @@ const Sidebar = () => {
     ) :
         (
 
-            <SidebarSmall />
+            <MenubarNarrow />
 
         )
 }
 
-export default Sidebar
+export default Menubar

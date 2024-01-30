@@ -97,7 +97,7 @@ const SearchResult = () => {
                     ...searchObj,
                     order: e.target.value
                 })
-            }} className="mx-2 border-gray-200 border-2 p-1 hover:outline-none hover:border-gray-400 outline-none">  {console.log("diff filter2")}
+            }} className="mx-2 border-gray-200 border-2 p-1 hover:outline-none hover:border-gray-400 outline-none my-2">  {console.log("diff filter2")}
                 <option value="relevance">
                     Relevance
                 </option>
@@ -116,7 +116,7 @@ const SearchResult = () => {
                     ...searchObj,
                     videoDuration: e.target.value
                 })
-            }} className="mx-2 border-gray-200 border-2 p-1 hover:outline-none hover:border-gray-400 outline-none">  {console.log("diff filter2")}
+            }} className="mx-2 border-gray-200 border-2 p-1 hover:outline-none hover:border-gray-400 outline-none my-2">  {console.log("diff filter2")}
                 <option value="any">
                     Any
                 </option>
@@ -136,7 +136,7 @@ const SearchResult = () => {
                     ...searchObj,
                     eventType: e.target.value
                 })
-            }} className="mx-2 border-gray-200 border-2 p-1 hover:outline-none hover:border-gray-400 outline-none">  {console.log("diff filter2")}
+            }} className="mx-2 border-gray-200 border-2 p-1 hover:outline-none hover:border-gray-400 outline-none my-2">  {console.log("diff filter2")}
                 <option value="completed" >
                     Completed
                 </option>
@@ -154,8 +154,8 @@ const SearchResult = () => {
                 (isSearchResultsAvailable &&
                     <SearchResultsShimmer />)
             }
-            {isFetching && (<div className='w-max mx-auto my-3 '><span className='text-xl text-gray-700 font-semibold'>Fetching more results...</span><i className="fa fa-spinner fa-spin fa-xl" ></i></div>)}
-            {!isSearchResultsAvailable && (<div className='w-max mx-auto my-3 '><span className='text-xl text-gray-700 font-semibold'>No more results found...</span></div>)}
+            {isFetching && (<div className='w-max mx-auto my-3 '><span className='text-base md:text-lg lg:text-xl text-gray-700 font-semibold'>Fetching more results...</span><i className="fa fa-spinner fa-spin fa-xl" ></i></div>)}
+            {!isSearchResultsAvailable && (<div className='w-max mx-auto my-3 '><span className='text-base md:text-lg lg:text-xl text-gray-700 font-semibold'>No more results found.</span></div>)}
         </div>
 
     )
