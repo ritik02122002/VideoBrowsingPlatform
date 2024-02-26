@@ -1,6 +1,6 @@
-# YouTube Clone
+# Video Streaming Website
 
-## Youtube clone built using primarily _React.js_ and _Tailwind CSS_
+## A video streaming website built using _React.js_ and _Tailwind CSS_ that provides a familiar interface to browse YouTube videos.
 
 ### Features:
 
