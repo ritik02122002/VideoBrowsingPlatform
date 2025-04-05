@@ -1,6 +1,6 @@
-# Video Streaming Website
+# Video Browsing Platform
 
-## A video streaming website built using _React.js_ and _Tailwind CSS_ that provides a familiar interface to browse YouTube videos.
+## A video browsing platform built using _React.js_ and _Tailwind CSS_ that provides a familiar interface to browse YouTube videos.
 
 ### Features:
 
